@@ -56,28 +56,7 @@
             box-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
         }
 
-        /* Toggle Switch */
-         #toggleMode {
-             padding: 8px 16px;
-             border-radius: 8px;
-             font-weight: 500;
-             background-color: #667eea;
-             color: white;
-             border: none;
-        }
-
-         #toggleMode:hover {
-             background-color: #5a67d8;
-        }
-         
-         
-         
-        .mode-toggle {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
+      
         .switch {
             position: relative;
             display: inline-block;
@@ -116,7 +95,4 @@
             transform: translateX(24px);
         }
 
-        .sun, .moon {
-            font-size: 16px;
-        }
    
