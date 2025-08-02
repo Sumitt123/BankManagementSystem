@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* General Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Body */
+
 body {
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: #fff;
@@ -19,7 +19,7 @@ body {
   padding: 20px;
 }
 
-/* Container */
+
 .container {
   background-color: #ffffff10;
   backdrop-filter: blur(12px);
@@ -30,7 +30,7 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Tabs */
+
 .tab-buttons {
   display: flex;
   justify-content: space-between;
@@ -56,7 +56,7 @@ body {
   background-color: #005ea2;
 }
 
-/* Forms */
+
 .form {
   display: none;
   flex-direction: column;
@@ -66,7 +66,7 @@ body {
   display: flex;
 }
 
-/* Form Fields */
+
 .form h2 {
   margin-bottom: 15px;
   text-align: center;
@@ -82,7 +82,7 @@ body {
   font-size: 14px;
 }
 
-/* Submit Button */
+
 .form button[type="submit"] {
   background-color: #28a745;
   color: white;
@@ -100,7 +100,7 @@ body {
   background-color: #1c7c35;
 }
 
-/* Error Box */
+
 .error-message {
   background-color: #ffe6e6;
   color: #d8000c;
@@ -123,7 +123,7 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive Styles */
+
 @media (max-width: 500px) {
   .container {
     padding: 20px;
