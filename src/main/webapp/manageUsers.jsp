@@ -1,7 +1,7 @@
 <%@ page import="java.sql.*, java.util.*, util.DatabaseConnection" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%
-    // Admin session check (optional)
+    
     Boolean isAdmin = (Boolean) session.getAttribute("isAdmin");
 if (isAdmin == null || !isAdmin) {
     response.sendRedirect("login.jsp?adminError=Please login as admin first");
