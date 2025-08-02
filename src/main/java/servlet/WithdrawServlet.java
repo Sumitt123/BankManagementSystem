@@ -50,17 +50,17 @@ public class WithdrawServlet extends HttpServlet {
                 double currentBalance = rs.getDouble("balance");
 
                 if (currentBalance >= amount) {
-                    // Start transaction
+                    
                     con.setAutoCommit(false);
 
-                    // 1. Update user's balance
+                    //  Update user's balance
                     String updateBalanceSQL = "UPDATE users SET balance = balance - ? WHERE email = ?";
                     PreparedStatement updateStmt = con.prepareStatement(updateBalanceSQL);
                     updateStmt.setDouble(1, amount);
                     updateStmt.setString(2, email);
                     updateStmt.executeUpdate();
 
-                    // 2. Insert transaction record
+                    //  Insert transaction record
                     String insertSQL = "INSERT INTO transaction (email, type, amount, description) VALUES (?, 'Withdraw', ?, ?)";
                     PreparedStatement insertStmt = con.prepareStatement(insertSQL);
                     insertStmt.setString(1, email);
@@ -68,7 +68,7 @@ public class WithdrawServlet extends HttpServlet {
                     insertStmt.setString(3, (description != null && !description.isEmpty()) ? description : "User withdrawal");
                     insertStmt.executeUpdate();
 
-                    con.commit();  // ✅ Commit both updates
+                    con.commit();  // Commit both updates
                     response.sendRedirect("dashboard.jsp?withdraw=success");
                 } else {
                     response.sendRedirect("withdraw.jsp?error=insufficientFunds");
