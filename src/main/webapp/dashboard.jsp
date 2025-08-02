@@ -109,17 +109,17 @@
     </div>
 </nav>
 
-<!-- Main Container -->
+
 <div class="container py-5">
 
-    <!-- Welcome & Balance -->
+    
     <div class="text-center mb-4">
         <h3>Hello, <%= username %> 👋</h3>
         <p class="text-muted">Your current balance is:</p>
         <h2>₹<%= String.format("%.2f", balance) %></h2>
     </div>
 
-    <!-- Action Buttons -->
+    
     <div class="row text-center g-4 mb-4">
         <div class="col-md-3"><a href="viewAccount.jsp" class="btn btn-custom btn-primary">View Account</a></div>
         <div class="col-md-3"><a href="deposit.jsp" class="btn btn-custom btn-success">Deposit</a></div>
@@ -127,9 +127,9 @@
         <div class="col-md-3"><a href="transfer.jsp" class="btn btn-custom btn-warning">Transfer</a></div>
     </div>
 
-   <!-- Cards -->
+   
 <div class="row g-4">
-    <!-- Recent Transactions Card -->
+   
     <div class="col-md-8">
         <div class="card shadow-sm">
             <div class="card-header bg-primary text-white">Recent Transactions</div>
@@ -158,15 +158,15 @@
         </div>
     </div>
 
-    <!-- Optional: Add another card/column on the right if needed -->
+  
     <div class="col-md-4">
-        <!-- You can add notifications, spending chart, etc. here later -->
+     
         <div class="card shadow-sm h-100 text-center p-4">
             <h5 class="mb-3">📊 Summary</h5>
             <p>Last 10 transactions shown. View full history for more.</p>
         </div>
     </div>
-</div> <!-- closes .row -->
+</div> 
 
 
 <!-- JS -->
