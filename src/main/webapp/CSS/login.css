@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  background-color: #ffffff10;
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Tabs */
+.tab-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.tab-buttons button {
+  flex: 1 1 30%;
+  padding: 10px;
+  background-color: #1e90ff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  min-width: 90px;
+}
+
+.tab-buttons button:hover {
+  background-color: #005ea2;
+}
+
+/* Forms */
+.form {
+  display: none;
+  flex-direction: column;
+}
+
+.form.active {
+  display: flex;
+}
+
+/* Form Fields */
+.form h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #f1f1f1;
+}
+
+.form input {
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Submit Button */
+.form button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.3s;
+}
+
+.form button[type="submit"]:hover {
+  background-color: #1c7c35;
+}
+
+/* Error Box */
+.error-message {
+  background-color: #ffe6e6;
+  color: #d8000c;
+  border: 1px solid #d8000c;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 0.6s ease-in-out;
+  transition: opacity 0.6s ease;
+}
+
+.error-message.fade-out {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tab-buttons button {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .form input, 
+  .form button[type="submit"] {
+    font-size: 15px;
+  }
+}

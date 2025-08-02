@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/* deposit.css */
+body.light-mode {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn-outline-secondary {
+    border-radius: 8px;
+}
+
+.dropdown-menu {
+    border-radius: 10px;
+}
+
+h4 {
+    font-weight: 600;
+}
+
+input.form-control {
+    border-radius: 8px;
+}
+
+.btn-success {
+    padding: 10px 20px;
+    border-radius: 8px;
+}

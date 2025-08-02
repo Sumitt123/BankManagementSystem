@@ -1,0 +1,80 @@
+@charset "UTF-8";
+body {
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+.light-mode {
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.dark-mode {
+    background-color: #0f1117;
+    color: #e0e0e0;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.card {
+    border: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.light-mode .card {
+    background-color: #ffffff;
+}
+
+.dark-mode .card {
+    background-color: #1a1d2c;
+}
+
+/* Toggle Switch */
+.mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+}
+
+.switch input { display: none; }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #764ba2;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}

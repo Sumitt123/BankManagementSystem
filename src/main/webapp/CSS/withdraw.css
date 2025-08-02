@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* withdraw.css */
+body.light-mode {
+    background-color: #f5f7fa;
+    color: #212529;
+}
+
+body.dark-mode {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+.container {
+    max-width: 700px;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+h4 {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    border-radius: 10px;
+}
+
+.btn-outline-secondary {
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+input.form-control {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.btn-danger {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+}

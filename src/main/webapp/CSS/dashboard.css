@@ -1,0 +1,122 @@
+  
+        body {
+            font-family: 'Poppins', sans-serif;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .navbar {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .navbar .navbar-brand {
+            color: white;
+            font-weight: bold;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dark-mode {
+            background-color: #0f1117;
+            color: #e0e0e0;
+        }
+
+        .light-mode {
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        .card {
+            border: none;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .light-mode .card {
+            background-color: #ffffff;
+        }
+
+        .dark-mode .card {
+            background-color: #1a1d2c;
+        }
+
+        .btn-custom {
+            width: 100%;
+            padding: 12px;
+            font-weight: 500;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
+        }
+
+        /* Toggle Switch */
+         #toggleMode {
+             padding: 8px 16px;
+             border-radius: 8px;
+             font-weight: 500;
+             background-color: #667eea;
+             color: white;
+             border: none;
+        }
+
+         #toggleMode:hover {
+             background-color: #5a67d8;
+        }
+         
+         
+         
+        .mode-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 52px;
+            height: 28px;
+        }
+
+        .switch input { display: none; }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            content: "";
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #764ba2;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(24px);
+        }
+
+        .sun, .moon {
+            font-size: 16px;
+        }
+   
