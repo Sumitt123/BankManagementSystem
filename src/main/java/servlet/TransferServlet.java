@@ -35,7 +35,7 @@ public class TransferServlet extends HttpServlet {
         try (Connection con = DatabaseConnection.getConnection()) {
             con.setAutoCommit(false);
 
-            // 1. Check sender balance
+            //  Check sender balance
             PreparedStatement senderBalanceStmt = con.prepareStatement("SELECT balance FROM users WHERE email = ?");
             senderBalanceStmt.setString(1, senderEmail);
             ResultSet rsSender = senderBalanceStmt.executeQuery();
@@ -51,7 +51,7 @@ public class TransferServlet extends HttpServlet {
                 return;
             }
 
-            // 2. Get receiver email
+            //  Get receiver email
             PreparedStatement receiverStmt = con.prepareStatement("SELECT email FROM users WHERE name = ?");
             receiverStmt.setString(1, receiverUsername);
             ResultSet rsReceiver = receiverStmt.executeQuery();
@@ -63,26 +63,26 @@ public class TransferServlet extends HttpServlet {
 
             String receiverEmail = rsReceiver.getString("email");
 
-            // 3. Deduct from sender
+            //  Deduct from sender
             PreparedStatement deductStmt = con.prepareStatement("UPDATE users SET balance = balance - ? WHERE email = ?");
             deductStmt.setDouble(1, amount);
             deductStmt.setString(2, senderEmail);
             deductStmt.executeUpdate();
 
-            // 4. Add to receiver
+            //  Add to receiver
             PreparedStatement addStmt = con.prepareStatement("UPDATE users SET balance = balance + ? WHERE email = ?");
             addStmt.setDouble(1, amount);
             addStmt.setString(2, receiverEmail);
             addStmt.executeUpdate();
 
-            // 5. Log transaction for sender
+            //  Log transaction for sender
             PreparedStatement logSender = con.prepareStatement("INSERT INTO transaction (email, type, amount, description) VALUES (?, 'transfer', ?, ?)");
             logSender.setString(1, senderEmail);
             logSender.setDouble(2, amount);
             logSender.setString(3, "To: " + receiverUsername + (description != null ? " – " + description : ""));
             logSender.executeUpdate();
 
-            // 6. Log transaction for receiver
+            //  Log transaction for receiver
             PreparedStatement logReceiver = con.prepareStatement("INSERT INTO transaction (email, type, amount, description) VALUES (?, 'receive', ?, ?)");
             logReceiver.setString(1, receiverEmail);
             logReceiver.setDouble(2, amount);
