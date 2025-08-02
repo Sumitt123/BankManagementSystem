@@ -26,20 +26,7 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
-.light-mode .card {
-    background-color: #ffffff;
-}
 
-.dark-mode .card {
-    background-color: #1a1d2c;
-}
-
-/* Toggle Switch */
-.mode-toggle {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
 
 .switch {
     position: relative;
